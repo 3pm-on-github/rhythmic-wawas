@@ -1,0 +1,32 @@
+[gd_scene load_steps=4 format=3 uid="uid://b2l656s2pkwfd"]
+
+[ext_resource type="AudioStream" uid="uid://ddeh1ohci408r" path="res://audio/tutorialstage.ogg" id="1_cb178"]
+[ext_resource type="Script" uid="uid://dev3exbguajs0" path="res://scripts/tutorialstage.gd" id="1_k0r55"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_0iyv0"]
+font_size = 64
+font_color = Color(0.5689727, 0.56897277, 0.5689727, 1)
+
+[node name="tutorialstage" type="Node2D"]
+script = ExtResource("1_k0r55")
+
+[node name="bg" type="ColorRect" parent="."]
+offset_right = 1920.0
+offset_bottom = 1080.0
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("1_cb178")
+
+[node name="title" type="Label" parent="."]
+offset_left = 13.0
+offset_top = -2.0
+offset_right = 534.0
+offset_bottom = 86.0
+text = "TUTORIAL STAGE"
+label_settings = SubResource("LabelSettings_0iyv0")
+
+[node name="blackbg" type="ColorRect" parent="."]
+visible = false
+offset_right = 1920.0
+offset_bottom = 1080.0
+color = Color(0, 0, 0, 1)
