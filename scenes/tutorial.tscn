@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://dj2qrviys56by"]
+[gd_scene format=3 uid="uid://dj2qrviys56by"]
 
 [ext_resource type="Script" uid="uid://djjy7ckve6gww" path="res://scripts/tutorial.gd" id="1_c13y7"]
 [ext_resource type="AudioStream" uid="uid://i1djduwixgqa" path="res://audio/tutorial.wav" id="2_4kmhl"]
@@ -16,38 +16,38 @@ font_size = 64
 [sub_resource type="LabelSettings" id="LabelSettings_6yjpi"]
 font_size = 32
 
-[node name="tutorial" type="Node2D"]
+[node name="tutorial" type="Node2D" unique_id=153768901]
 script = ExtResource("1_c13y7")
 
-[node name="bg" type="ColorRect" parent="."]
+[node name="bg" type="ColorRect" parent="." unique_id=1880611418]
 offset_right = 1920.0
 offset_bottom = 1080.0
 
-[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=803053617]
 stream = ExtResource("2_4kmhl")
 
-[node name="AudioStreamPlayer2D2" type="AudioStreamPlayer2D" parent="."]
+[node name="AudioStreamPlayer2D2" type="AudioStreamPlayer2D" parent="." unique_id=660906158]
 stream = ExtResource("3_6yjpi")
 
-[node name="AudioStreamPlayer2D3" type="AudioStreamPlayer2D" parent="."]
+[node name="AudioStreamPlayer2D3" type="AudioStreamPlayer2D" parent="." unique_id=1723577316]
 stream = ExtResource("4_gbqnl")
 
-[node name="Rxejub" type="Sprite2D" parent="."]
+[node name="Rxejub" type="Sprite2D" parent="." unique_id=1119156376]
 position = Vector2(1555, 643)
 texture = ExtResource("3_cq4me")
 
-[node name="RxejubTable" type="Sprite2D" parent="."]
+[node name="RxejubTable" type="Sprite2D" parent="." unique_id=358231452]
 position = Vector2(1544, 916)
 texture = ExtResource("4_6yjpi")
 
-[node name="dialogbox" type="ColorRect" parent="."]
+[node name="dialogbox" type="ColorRect" parent="." unique_id=602358925]
 offset_left = 116.0
 offset_top = 797.0
 offset_right = 1195.0
 offset_bottom = 1038.0
 color = Color(0, 0, 0, 0.7294118)
 
-[node name="title" type="Label" parent="dialogbox"]
+[node name="title" type="Label" parent="dialogbox" unique_id=922996057]
 layout_mode = 0
 offset_left = 13.0
 offset_right = 238.0
@@ -55,7 +55,7 @@ offset_bottom = 88.0
 text = "RXEJUB"
 label_settings = SubResource("LabelSettings_cq4me")
 
-[node name="text" type="Label" parent="dialogbox"]
+[node name="text" type="Label" parent="dialogbox" unique_id=1892843956]
 layout_mode = 0
 offset_left = 16.0
 offset_top = 80.0
@@ -63,24 +63,24 @@ offset_right = 1065.0
 offset_bottom = 224.0
 label_settings = SubResource("LabelSettings_6yjpi")
 
-[node name="pendingWawa" type="Sprite2D" parent="."]
+[node name="pendingWawa" type="Sprite2D" parent="." unique_id=455390007]
 visible = false
 position = Vector2(674, 390)
 scale = Vector2(2, 2)
 texture = ExtResource("8_ckvwl")
 
-[node name="Wawa" type="Sprite2D" parent="."]
+[node name="Wawa" type="Sprite2D" parent="." unique_id=1215318598]
 visible = false
 position = Vector2(674, 390)
 scale = Vector2(2, 2)
 texture = ExtResource("7_gbqnl")
 
-[node name="ScoreScreenshot" type="Sprite2D" parent="."]
+[node name="ScoreScreenshot" type="Sprite2D" parent="." unique_id=110478630]
 visible = false
 position = Vector2(649, 419)
 texture = ExtResource("9_nlqja")
 
-[node name="blackbg" type="ColorRect" parent="."]
+[node name="blackbg" type="ColorRect" parent="." unique_id=186196287]
 visible = false
 offset_right = 1920.0
 offset_bottom = 1080.0

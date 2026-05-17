@@ -1,10 +1,11 @@
-[gd_scene load_steps=8 format=3 uid="uid://b2l656s2pkwfd"]
+[gd_scene format=3 uid="uid://b2l656s2pkwfd"]
 
 [ext_resource type="AudioStream" uid="uid://ddeh1ohci408r" path="res://audio/tutorialstage.ogg" id="1_cb178"]
 [ext_resource type="Script" uid="uid://dev3exbguajs0" path="res://scripts/tutorialstage.gd" id="1_k0r55"]
 [ext_resource type="Texture2D" uid="uid://ddf44sx2ym2fd" path="res://images/pendingWawa.png" id="3_hr33h"]
 [ext_resource type="Script" uid="uid://cf06kv7he2dyn" path="res://scripts/wawa.gd" id="4_7gmbb"]
 [ext_resource type="Texture2D" uid="uid://sc4tp2cy8yiu" path="res://images/Wawa.png" id="5_xkrs0"]
+[ext_resource type="Texture2D" uid="uid://cli1fdtx8tihx" path="res://images/smile.png" id="6_7gmbb"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_0iyv0"]
 font_size = 64
@@ -14,17 +15,21 @@ font_color = Color(0.5689727, 0.56897277, 0.5689727, 1)
 font_size = 128
 font_color = Color(0, 0, 0, 1)
 
-[node name="tutorialstage" type="Node2D"]
+[sub_resource type="LabelSettings" id="LabelSettings_xkrs0"]
+font_size = 64
+font_color = Color(0, 0, 0, 1)
+
+[node name="tutorialstage" type="Node2D" unique_id=1183362515]
 script = ExtResource("1_k0r55")
 
-[node name="bg" type="ColorRect" parent="."]
+[node name="bg" type="ColorRect" parent="." unique_id=1416231324]
 offset_right = 1920.0
 offset_bottom = 1080.0
 
-[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=677906412]
 stream = ExtResource("1_cb178")
 
-[node name="title" type="Label" parent="."]
+[node name="title" type="Label" parent="." unique_id=458961872]
 offset_left = 13.0
 offset_top = -2.0
 offset_right = 534.0
@@ -32,7 +37,7 @@ offset_bottom = 86.0
 text = "TUTORIAL STAGE"
 label_settings = SubResource("LabelSettings_0iyv0")
 
-[node name="score" type="Label" parent="."]
+[node name="score" type="Label" parent="." unique_id=1790425614]
 offset_left = 1386.0
 offset_top = -19.0
 offset_right = 1897.0
@@ -41,22 +46,35 @@ text = "0"
 label_settings = SubResource("LabelSettings_hr33h")
 horizontal_alignment = 2
 
-[node name="Wawa" type="Sprite2D" parent="."]
+[node name="Wawa" type="Sprite2D" parent="." unique_id=1195968359]
 visible = false
 position = Vector2(889, 530)
 texture = ExtResource("3_hr33h")
 script = ExtResource("4_7gmbb")
 
-[node name="Wawa" type="Sprite2D" parent="Wawa"]
+[node name="Wawa" type="Sprite2D" parent="Wawa" unique_id=1486086404]
 texture = ExtResource("5_xkrs0")
 
-[node name="hitbox" type="TextureButton" parent="Wawa"]
+[node name="hitbox" type="TextureButton" parent="Wawa" unique_id=888299221]
 offset_left = -77.0
 offset_top = -100.0
 offset_right = 75.0
 offset_bottom = 99.0
 
-[node name="blackbg" type="ColorRect" parent="."]
+[node name="Smile" type="Sprite2D" parent="." unique_id=173601331]
+position = Vector2(979, 525)
+scale = Vector2(2.5, 2.5)
+texture = ExtResource("6_7gmbb")
+
+[node name="Label" type="Label" parent="Smile" unique_id=2027901260]
+offset_left = -183.59999
+offset_top = 77.99999
+offset_right = 184.40001
+offset_bottom = 166.0
+text = "you're did it"
+label_settings = SubResource("LabelSettings_xkrs0")
+
+[node name="blackbg" type="ColorRect" parent="." unique_id=728069129]
 visible = false
 offset_right = 1920.0
 offset_bottom = 1080.0

@@ -82,7 +82,7 @@ func dialog1():
 	
 	await get_tree().create_timer(1.0).timeout
 	$dialogbox.visible = true
-	await dialog("..we click the wawa.")
+	await dialog("..we click the wawa.££ You can also use W and X to click the wawas.")
 	await get_tree().create_timer(0.5).timeout
 	await dialog("Pretty simple, huh?££\nNow how about you try this stage.")
 	await get_tree().create_timer(1.0).timeout
